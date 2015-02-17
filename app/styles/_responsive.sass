@@ -1,0 +1,91 @@
+@import variables
+
+$xxsscreen: 336px
+$xsscreen: 480px
+$sxsscreen: 560px
+$smscreen: 768px
+$mdscreen: 1024px
+$lgscreen: 1280px
+$hugescreen: 1440px
+
+@media screen and (max-width: $mdscreen)
+	html body
+		font-size: 14px
+
+	#main-nav
+		li
+			margin-left: 1em
+
+		ul.nav-primary
+			display: none
+
+		ul.nav-secondary
+			li.menu
+				display: inline-block
+
+	.home-article 
+		.article-img img
+			margin-top: -10%
+
+@media screen and (max-width: $smscreen)
+	html body
+		font-size: 14px
+
+	.home-bg 
+		&:before
+			background-position: center 75%
+
+	.home-article 
+		.article-img img
+			margin-top: 0
+			width: 150%
+			left: -10%
+
+@media screen and (max-width: $xsscreen)
+	.home-bg
+		&:before
+			background-size: auto 100%
+
+@media screen and (max-width: $xsscreen)
+	html body
+		font-size: 13px
+
+	.home-bg 
+		padding: 5em 0 4.5em
+
+		&:before
+			background-position: center 15%
+
+		h1
+			font-size: 2.5em
+
+		p
+			font-size: 1em
+
+	.home-breakdown 
+		h2
+			font-size: 2.5em
+
+	.breakdown-item 
+		.breakdown-left
+			width: 1.5em
+			font-size: 4em
+
+		.breadown-right
+			h3
+				font-size: 1.33em
+
+	.home-article 
+		h3
+			font-size: 2em
+
+		.article-img img
+			width: 200%
+			left: -50%
+
+		.container-inner > p
+			margin-left: 0
+
+@media screen and (max-width: $xxsscreen)
+	html body
+		font-size: 12px

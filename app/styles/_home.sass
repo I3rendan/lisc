@@ -1,0 +1,241 @@
+@import variables
+
+.home-bg
+    display: block
+    width: 100%
+    position: relative
+    margin-top: -$header-height
+    color: $color-white
+    padding: (2.5em + $header-height) 0 6.33em
+    background: $color-primary
+    z-index: 0
+
+    &:before
+        background-image: url(/images/home-bg1.jpg)
+        background-repeat: no-repeat
+        background-position: center 33%
+        background-size: 100%
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        position: absolute
+        z-index: -1
+        opacity: 0.425
+        content: ""
+
+    h1
+        color: #c3d4fe
+        font-size: 2.75em
+        margin: 0.33em 0 1em
+        text-shadow: 0 1px 2px rgba(0,0,0,0.15)
+
+    p
+        font-size: 1.15em
+        line-height: 1.33em
+
+        a
+            color: lighten($color-primary-alt, 25%)
+            margin-left: 0.25em
+
+    .home-btn
+        width: 100%
+        bottom: 0
+        left: 0
+        padding: 0.85em 0
+        display: block
+        position: absolute
+        text-align: center
+        font-weight: 200
+        font-size: 1.33em
+        background: fade-out($color-primary-alt, 0.5)
+        color: lighten($color-primary-alt, 50%)
+        cursor: pointer
+        transition: background ease $trans-speed
+        text-shadow: 0 1px 1px rgba(0,0,0,0.15)
+
+        &:hover
+            background: fade-out($color-primary-alt, 0.33)
+
+        p
+            padding: 0
+            margin: 0
+
+            .icon
+                position: relative
+                top: 0.15em
+                margin-left: 0.15em
+                font-size: 0.85em
+
+.home-breakdown
+    padding: 2em 5% 1em
+
+    h2
+        color: $color-accent
+        font-size: 3em
+        margin: 0.75em 0 0.25em
+
+    > p
+        font-size: 1.25em
+        margin: 0.75em 0
+        padding: 0
+
+.breakdown-list
+    display: inline-block
+    width: 100%
+    margin: 2em 0
+
+.breakdown-item
+    display: table
+    width: 100%
+    border-radius: $border-radius
+    overflow: hidden
+    margin: 0.75em 0 1.25em
+
+    &:nth-child(odd)
+        background: $color-lightest
+
+    &:nth-child(even)
+        background: fade-out($color-white, 0.67)
+
+    &:nth-child(1) 
+        .breakdown-left
+            background: $color-secondary
+
+        .breakdown-right h3
+            color: $color-secondary
+
+    &:nth-child(2) 
+        .breakdown-left
+            background: $color-accent
+
+        .breakdown-right h3
+            color: $color-accent
+
+    &:nth-child(3) 
+        .breakdown-left
+            background: $color-primary-light
+
+        .breakdown-right h3
+            color: $color-primary-light
+
+    &:nth-child(4) 
+        .breakdown-left
+            background: $color-primary
+
+        .breakdown-right h3
+            color: $color-primary
+
+    .breakdown-left
+        display: table-cell
+        width: 2.25em
+        vertical-align: middle
+        text-align: center
+        color: $color-white
+        font-size: 5em
+        min-height: 3em
+        padding: 0.25em 0
+
+        .icon
+            text-shadow: 0 -1px 0 rgba(0,0,0,0.15)
+
+    .breakdown-right
+        display: table-cell
+        vertical-align: middle
+        padding: 1em 2.5em
+
+        h3
+            font-family: "Source Sans Pro", sans-serif
+            font-size: 1.67em
+            margin: 0.33em 0 0.67em
+            font-weight: 400
+            padding: 0
+            font-style: normal
+
+.wrap-home-articles
+    display: block
+    width: 100%
+
+.home-article
+    display: block
+    width: 100%
+    color: $color-white
+    position: relative
+    overflow: hidden
+
+    &:nth-child(1)
+        background: $color-dark
+
+        h3, .article-btn
+            color: $color-accent-light
+
+    &:nth-child(2)
+        background: $color-accent-dark
+
+        .article-img img
+            opacity: 0.25
+            margin-top: -30%
+
+        h3, .article-btn
+            color: lighten($color-accent-light, 15%)
+
+    h3
+        font-size: 2.25em
+        font-weight: 100
+        text-shadow: 0 1px 1px rgba(0,0,0,0.15)
+
+        .icon
+            margin-right: 0.5em
+            font-size: 1.25em
+            position: relative
+            top: 0.15em
+            display: inline-block
+            margin-bottom: 0.25em
+
+    .container-inner
+        position: relative
+        z-index: 1
+        padding: 2.5em 0 7.5em
+
+        > p
+            font-size: 1.25em
+            line-height: 1.25em
+            margin: 2em 0 1em 3.67em
+
+    .article-btn
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 100%
+        font-size: 1.5em
+        background: fade-out($color-white, 0.85)
+        text-align: center
+        z-index: 1
+        font-weight: 300
+        cursor: pointer
+        transition: background ease $trans-speed
+
+        &:hover
+            background: fade-out($color-white, 0.75)
+
+        .icon
+            margin-right: 0.5em
+            font-size: 1.15em
+            position: relative
+            top: 0.15em
+
+    .article-img
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+
+        img
+            min-height: 100%
+            width: 100%
+            height: auto
+            margin-top: -25%
+            opacity: 0.18
+
+
+

@@ -1,0 +1,129 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600)
+@import variables
+@import buttons
+@import icons
+@import home
+
+h1, h2, h3, h4, h5
+    font-family: "Times New Roman", serif
+    font-style: italic
+    font-weight: 100
+    text-shadow: 0 1px 0 $color-white
+
+a
+    text-decoration: none
+    color: $color-accent
+
+    &:hover
+        text-decoration: underline
+
+html 
+    height: 100%
+
+body 
+    background-image: url(../images/bg.jpg)
+    background-color: $color-lightest
+    padding: 0
+    margin: 0
+    min-height: 100%
+    font-size: 16px
+    font-family: "Source Sans Pro", sans-serif
+    line-height: 1
+
+header 
+    width: 95%
+    background: fade-out($color-white, 0.1)
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15)
+    display: block
+    position: relative
+    z-index: 1
+    height: $header-height
+    padding: 0 2.5%
+    box-shadow: 0 -1px 0 $color-white inset
+
+.container-inner
+    display: block
+    width: 90%
+    margin: 0 auto
+    max-width: 64em
+
+#logo
+    float: left
+    padding: 0.5em 0 0
+
+    img
+        height: 2.75em
+        width: auto
+
+#main-nav 
+    margin: 0
+    padding: 0
+    float: right
+    position: relative
+
+    ul 
+        margin: 0
+        padding: 0
+        display: inline
+        transition: opacity ease $trans-speed
+
+        &.nav-primary.active
+            display: block
+            opacity: 1
+            max-height: 10000em
+            visibility: visible
+            position: absolute
+            background: $color-white
+            top: 100%
+            border-radius: $border-radius
+            right: 10em
+            width: 12em
+            box-shadow: 0 1px 3px rgba(0,0,0,0.25)
+
+            li
+                display: inline-block
+                width: calc(100% - 2em)
+                padding: 0.75em 0.5em
+
+    li 
+        list-style: none
+        margin: 0.225em 0 0 1.5em
+        padding: 0.5em
+        display: inline-block
+        color: $color-primary
+        cursor: pointer
+        transition: color ease $trans-speed
+
+        &:hover
+            color: $color-accent
+
+        &.menu
+            display: none
+
+            &:hover
+                .icon
+                    color: $color-accent
+
+            .icon
+                top: 0.15em
+                left: 0.15em
+                cursor: pointer
+                font-size: 1.33em
+                position: relative
+                transition: color ease $trans-speed
+
+        &.search
+            font-size: 1.25em
+
+            .icon
+                position: relative
+                top: 0.225em
+
+        &.donate
+            padding: 0
+
+.container
+    display: block
+    position: relative
+
+@import responsive

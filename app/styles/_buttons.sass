@@ -1,0 +1,74 @@
+@import variables
+
+.btn
+	background: $color-primary
+	border-radius: 0.33em
+	color: $color-white
+	font-size: 1em
+	font-weight: 400
+	min-height: 32px
+	padding: 0.67em 1em
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.08)
+	display: inline-block
+	cursor: pointer
+	list-height: 1
+	box-shadow: 0 1px 1px rgba(0,0,0,0.1)
+	transition: background ease $trans-speed, color ease $trans-speed
+	box-sizing: border-box
+
+	&:hover
+		background: darken($color-primary,15%)
+
+	&.btn-white
+		background: $color-white
+		color: $color-secondary
+
+		&:hover
+			background: darken($color-secondary,10%)
+			color: $color-white
+
+	&.btn-lightest
+		background: $color-lightest
+		color: $color-body-text
+
+		&:hover
+			background: darken($color-lightest,10%)
+
+	&.btn-lighter
+		background: $color-lighter
+		color: $color-body-text
+
+		&:hover
+			background: darken($color-lighter,10%)
+
+	&.btn-primary-light
+		background: $color-primary-light
+
+		&:hover
+			background: darken($color-primary-light,10%)
+
+	&.btn-primary-dark
+		background: $color-primary-dark
+
+		&:hover
+			background: darken($color-primary-dark,10%)
+
+	&.btn-secondary
+		background: $color-secondary
+
+		&:hover
+			background: darken($color-secondary,10%)
+
+	&.btn-accent, &.lo-btn-accent
+		background: $color-accent
+
+		&:hover
+			background: darken($color-accent,10%)
+
+	.icon
+		margin-left: 0.5em
+		font-size: 1.15em
+		position: relative
+		top: 0.15em
+		line-height: 0
+		
